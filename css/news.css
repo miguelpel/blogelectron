@@ -1,0 +1,333 @@
+/* Here the font-family imports */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/opensans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+body,
+body * {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #FDFDFD;
+    overflow-x: hidden;
+}
+
+
+/* removes the underline and the color of links. */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ul is in in the footer menu*/
+
+ul {
+    list-style-type: none;
+}
+
+
+/* orange is a class used as <span> when we need to
+turn a letter red*/
+
+.orange {
+    color: #FF7F20;
+}
+
+
+/* Header */
+
+header {
+    height: 16vh;
+    /* to avoid the social links */
+    padding-right: 50px;
+}
+
+.headerTop {
+    width: 100vw;
+}
+
+header h1 {
+    padding: 6px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1rem;
+    float: right;
+    position: relative;
+    top: 0;
+    right: 50px;
+}
+
+#logo {
+    /* the logo already have padding 0 and margin 0.
+    padding is internal to the svg file*/
+    padding: 10px;
+    width: 400px;
+}
+
+
+/* Social Links */
+
+.social-medias {
+    position: fixed;
+    top: 6px;
+    right: 10px;
+    z-index: 2;
+}
+
+.social-medias img {
+    display: block;
+    margin: 5px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+.social-medias img:hover {
+    opacity: 1;
+}
+
+
+/* NavBar */
+
+nav {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 1rem;
+    width: 100vw;
+    padding: 0px 0px 0px 0px;
+    position: absolute;
+    top: 90px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav a:hover {
+    color: #FF7F20;
+}
+
+.active {
+    color: #FF7F20;
+}
+
+#navBar {
+    display: block;
+}
+
+#navBarPhone {
+    display: none;
+    padding-bottom: 30px;
+}
+
+
+/* SECTIONS */
+
+.section-container {
+    min-height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0 0 0;
+}
+
+section {
+    padding: 10px 15px;
+    width: 80vw;
+    text-align: center;
+}
+
+section h2,
+section p {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+section h2 {
+    font-size: 1.2rem;
+}
+
+section p {
+    font-size: 0.8rem;
+}
+
+section h2:hover {
+    color: #FF7F20;
+}
+
+@media only screen and (max-width: 716px) {
+    /* section {
+        padding-right: 20px;
+    } */
+}
+
+@media only screen and (max-width: 700px) {
+    header {
+        height: 20vh;
+    }
+    #logo {
+        width: 200px;
+    }
+    header h1 {
+        padding: 0px 10px;
+        font-size: 0.8rem;
+        float: none;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    nav {
+        top: 120px;
+    }
+    .social-medias {
+        position: fixed;
+        top: 6px;
+        right: 10px;
+        z-index: 2;
+    }
+    .social-medias img {
+        display: block;
+        margin: 5px;
+        width: 22px;
+        height: 22px;
+        opacity: 0.6;
+    }
+    /* section {
+        padding-right: 20px;
+    }
+    .social-medias {
+        right: 5px;
+    } */
+    /* .section-container {
+        display: inline;
+    } */
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    #logo {
+        width: 200px;
+        position: relative;
+        top: 2px;
+    }
+    header {
+        height: 16vh;
+    }
+    header h1 {
+        left: 0px;
+    }
+    nav {
+        position: relative;
+        top: 20px;
+        padding-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #navBar {
+        display: none;
+    }
+    #navBarPhone {
+        display: block;
+    }
+    .social-medias img {
+        width: 23px;
+        height: 23px;
+    }
+    section {
+        padding-right: 30px;
+    }
+    .social-medias {
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #logo {
+        width: 150px;
+    }
+    header h1 {
+        font-size: .7rem;
+        top: 0px;
+    }
+    /* .orange {
+        color: black;
+    } */
+    section h2 {
+        font-size: 1rem;
+    }
+    section p {
+        font-size: 0.7rem;
+    }
+    section {
+        padding-right: 50px;
+    }
+    .social-medias {
+        right: 0px;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    header {
+        height: 18vh;
+    }
+}
+
+@media only screen and (max-height: 610px) {
+    header {
+        height: 20vh;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    header {
+        height: 22vh;
+    }
+}
+
+@media only screen and (max-height: 500px) {
+    header {
+        height: 24vh;
+    }
+}
+
+@media only screen and (max-height: 450px) {
+    header {
+        height: 26vh;
+    }
+    #navBarPhone {
+        padding-bottom: 0px;
+    }
+}
